@@ -1,9 +1,7 @@
 // main.cpp
-#include <iostream>
-#include <boost/filesystem.hpp>
+#include <spdlog/spdlog.h>
 
 int main() {
-    boost::filesystem::path current_path = boost::filesystem::current_path();
-    std::cout << "Current path: " << current_path << std::endl;
+    spdlog::info("Hello from spdlog!");
     return 0;
 }

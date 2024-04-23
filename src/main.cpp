@@ -1,7 +1,9 @@
 // main.cpp
 #include <iostream>
+#include <boost/filesystem.hpp>
 
 int main() {
-    std::cout << "Hello, CMake!" << std::endl;
+    boost::filesystem::path current_path = boost::filesystem::current_path();
+    std::cout << "Current path: " << current_path << std::endl;
     return 0;
 }

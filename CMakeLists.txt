@@ -4,14 +4,8 @@ project(MyProject)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Download and configure spdlog from GitHub
-include(FetchContent)
-FetchContent_Declare(
-    spdlog
-    GIT_REPOSITORY https://github.com/gabime/spdlog.git
-    GIT_TAG v1.11.0
-)
-FetchContent_MakeAvailable(spdlog)
+# Add the spdlog subdirectory
+add_subdirectory(thirdpirty/spdlog EXCLUDE_FROM_ALL)
 
 # Add the executable
 add_executable(MyProject src/main.cpp)
